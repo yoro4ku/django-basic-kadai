@@ -10,13 +10,14 @@
             <th>価格</th>
         </tr>
     </thead>
-    {% for product in object_list %}
-    <tr>
-        <td>{{ product.name }}</td>
-        <td>{{ product.price }} 円</td>
-    </tr>
-    {% endfor %}
+    <tbody>
+        <tr>
+            <td>{{ object.name }}</td>
+            <td>{{ object.price }} 円</td>
+        </tr>
+    </tbody>
 </table>
-<br>
+
 <a href="{% url 'list' %}">戻る</a>
+
 {% endblock %}
